@@ -115,19 +115,19 @@ function drawFunction() {
 	cxt.clearRect(-canvas.width, -canvas.height, 2*canvas.width, 2*canvas.height);
 
     function fx(t){
-        return (2+Math.cos(3*t))*Math.cos(2*t)
+        return 2*Math.sin(t)
     }
     function fy(t){
-        return (2+Math.cos(3*t))*Math.sin(2*t)
+        return 2*Math.cos(t)
     }
     function fz(t){
-        return Math.sin(3*t)
+        return t/5
     }
 
     var i=0;
     var dt=0.01;
     var z_d = 1;   // move the center of the graph along z-axis
-    for (var t = -Math.PI; t <= Math.PI; t += dt) {
+    for (var t = -Math.PI; t <= 6*Math.PI; t += dt) {
         nodes[i] = {x:fx(t), y:fy(t), z:fz(t)-z_d};
         ++i;
     }
