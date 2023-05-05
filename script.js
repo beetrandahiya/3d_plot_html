@@ -10,8 +10,8 @@ var yMin = -5;
 var yMax = 5;
 
 // rotation angles [rad]
-var rotx = 300 * Math.PI/180;
-var roty = 25 * Math.PI/180;
+var rotx = 0 * Math.PI/180;
+var roty = 0 * Math.PI/180;
 var rotz = 0 * Math.PI/180;
 
 var nodes =[];
@@ -82,7 +82,7 @@ function handleMove(e) {
 		roty = roty + (mouseX - pmouseX)/sensetivity;
 		drawFunction();
 	}
-	e.preventDefault();
+	e.preventDefault()  ;
 };
 // *** END Mouse rotate. ***
 
@@ -132,7 +132,6 @@ function drawFunction() {
         ++i;
     }
     
-	
 	nodesAxes[0] = {x:0, y:0, z:-z_d};
 	nodesAxes[1] = {x:xMax, y:0, z:-z_d};
 	nodesAxes[2] = {x:0, y:yMax, z:-z_d};
@@ -190,7 +189,6 @@ function drawFunction() {
 
     //end performance timer
     var t1 = performance.now();
-    console.log("Call to draw took " + (t1 - t0) + " milliseconds.")
 
 };
 
